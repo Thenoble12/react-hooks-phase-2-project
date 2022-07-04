@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "userId": 0,
+      "firstName": "Elijah",
+      "lastName": "Noble",
+      "email": "admin@admin.com",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "firstName": "Joseph",
+      "lastName": "Noble",
+      "email": "joe@whatuknow.com",
+      "username": "joeknow",
+      "password": "password",
+      "userId": 1
+    },
+    {
+      "firstName": "Daniel",
+      "lastName": "Noble",
+      "email": "dantheman@gmail.com",
+      "username": "DanDaMan",
+      "password": "password",
+      "userId": 2
+    }
+  ]
+}
