@@ -13,22 +13,23 @@ import NavBar from './NavBar';
 function App() {
   const [ userAccounts, setUserAccounts ] = useState([])  
   const [ activeUser, setActiveUser ] = useState(null)
+  const [ inventories, setInvetories ] = useState({})
 
-  let navigate = useNavigate();
-  console.log(activeUser)
+  // let navigate = useNavigate();
+  // console.log(activeUser)
 
-  useEffect(()=>{    
-    activeUser ? navigate("/home") : navigate("/login")
-  },[]);
+  // useEffect(()=>{    
+  //   activeUser ? navigate("/home") : navigate("/login")
+  // },[]);
 
   return (
     <div className="App">
           { activeUser ? <NavBar user={activeUser} logout={setActiveUser} /> : null }
             <Routes>   
-                { activeUser ? <Route path="/" element={<Inventories />} /> : <Route path="/" element={<Login />} />}           
-                <Route path='/login' element={<Login activeAccount={setActiveUser} />}/>
+                { activeUser ? <Route path="/" element={<Inventories inventories={inventories}  />} /> : <Route path="/" element={<Login activeAccount={setActiveUser} accountInventories={setInvetories} />} />}           
+                <Route path='/login' element={<Login activeAccount={setActiveUser} accountInventories={setInvetories} />}/>
                 <Route path='/register' element={<Register  />} />   
-                <Route path='/home' element={<Inventories  />} />           
+                <Route path='/home' element={<Inventories inventories={inventories}  />} />           
                 <Route path="*" element={<Navigate to="/" replace />} />   
             </Routes>
     </div>

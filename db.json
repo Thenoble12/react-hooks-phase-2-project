@@ -6,7 +6,21 @@
       "lastName": "Noble",
       "email": "admin@admin.com",
       "username": "admin",
-      "password": "password"
+      "password": "password",
+      "inventories": [
+        {
+          "inventoryName": "",
+          "inventory": [
+            {
+              "name": "",
+              "price": 0,
+              "quantity": 0,
+              "condition": "",
+              "description": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "firstName": "Joseph",
@@ -14,6 +28,20 @@
       "email": "joe@whatuknow.com",
       "username": "joeknow",
       "password": "password",
+      "inventories": [
+        {
+          "inventoryName": "",
+          "inventory": [
+            {
+              "name": "",
+              "price": 0,
+              "quantity": 0,
+              "condition": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
       "userId": 1
     },
     {
@@ -22,7 +50,43 @@
       "email": "dantheman@gmail.com",
       "username": "DanDaMan",
       "password": "password",
+      "inventories": [
+        {
+          "inventoryName": "",
+          "inventory": [
+            {
+              "name": "",
+              "price": 0,
+              "quantity": 0,
+              "condition": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
       "userId": 2
+    },
+    {
+      "firstName": "Tom",
+      "lastName": "Tobar",
+      "email": "tomt@gmail.com",
+      "username": "tomtom",
+      "password": "password",
+      "inventories": [
+        {
+          "inventoryName": "",
+          "inventory": [
+            {
+              "name": "",
+              "price": 0,
+              "quantity": 0,
+              "condition": "",
+              "description": ""
+            }
+          ]
+        }
+      ],
+      "userId": 3
     }
   ]
 }

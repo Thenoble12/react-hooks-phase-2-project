@@ -1,23 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Inventories from "./Inventories";
 
 
 
-function Login({ activeAccount }) {
+function Login({ activeAccount, accountInventories }) {
 
     const [ activeAccounts, setActiveAccounts] = useState([])   
     const [ username, setUsername ] = useState("")   
     const [ password, setPassword ] = useState("")
+    const navigate = useNavigate()
 
     
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const user = activeAccounts.find((account) => account.username === username && account.password === password )
+        console.log("HEREEEEEEEEE!!!!!!!!!!!!!!!!!!!")
         console.log(user)
         if (user) {
             activeAccount(user);
+            accountInventories(user.inventories);
+            navigate("/home")
+
         }
         else {
             alert("Username or Password is Incorrect!!!") 
@@ -51,7 +56,7 @@ function Login({ activeAccount }) {
                     <input onChange={(e)=>setPassword(e.target.value)}type="password" name="password" required />                    
                 </div> 
                 <div className="button-container">                    
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" className="btn">Login</button>
                 </div>  
                 <div className="link-container">
                     <Link to="/register">Need an Account?</Link>
