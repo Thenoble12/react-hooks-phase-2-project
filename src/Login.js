@@ -15,9 +15,8 @@ function Login({ activeAccount, accountInventories }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const user = activeAccounts.find((account) => account.username === username && account.password === password )
-        console.log("HEREEEEEEEEE!!!!!!!!!!!!!!!!!!!")
-        console.log(user)
+        const user = activeAccounts.find((account) => account.username === username && account.password === password )        
+       
         if (user) {
             activeAccount(user);
             accountInventories(user.inventories);
